@@ -23,6 +23,7 @@ Feature: Search_Feature
       Then verify page title contains "bmw"
       Then close the application
 
+
       # "" is used to parameterize feature file
       # benefit of parameterizing
 
