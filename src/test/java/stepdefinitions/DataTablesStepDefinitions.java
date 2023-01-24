@@ -82,7 +82,5 @@ public class DataTablesStepDefinitions {
         ReusableMethods.waitFor(1);
         Assert.assertTrue(dataTablesPage.nameColumn.getText().contains(string));
     }
-
-
 }
 

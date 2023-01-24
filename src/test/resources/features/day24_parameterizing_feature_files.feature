@@ -25,5 +25,5 @@ Feature: Search_Feature
 
 
       # "" is used to parameterize feature file
-      # benefit of parameterizing
+      # benefit of parametrizing is to create better reusable test steps
 
