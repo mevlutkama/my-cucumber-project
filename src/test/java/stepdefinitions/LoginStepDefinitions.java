@@ -6,6 +6,8 @@ import io.cucumber.datatable.DataTable;
 import org.junit.Assert;
 import pages.HomePage;
 import pages.LoginPage;
+import utilities.Driver;
+import utilities.ReusableMethods;
 
 import java.util.List;
 import java.util.Map;
@@ -39,5 +41,12 @@ public class LoginStepDefinitions {
     public void verify_the_application_login_is_successful() {
         Assert.assertTrue(homePage.userID.isDisplayed());
 
+    }
+
+    @Then("verify the login page url contains login keyword")
+    public void verify_the_login_page_url_contains_login_keyword() {
+        ReusableMethods.waitFor(3);
+        // Below Assertion fails
+        Assert.assertTrue(Driver.getDriver().getCurrentUrl().contains("login"));
     }
 }
