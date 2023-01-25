@@ -2,6 +2,7 @@ package stepdefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.DataTablesPage;
 import utilities.Driver;
@@ -15,61 +16,61 @@ public class DataTablesStepDefinitions {
         Driver.getDriver().get(string);
 
     }
-    @Given("user clicks on the new button")
+    @When("user clicks on the new button")
     public void user_clicks_on_the_new_button() {
         ReusableMethods.waitFor(1);
         dataTablesPage.newButton.click();
 
     }
-    @Given("user enters the first name {string}")
+    @When("user enters the first name {string}")
     public void user_enters_the_first_name(String string) {
         ReusableMethods.waitFor(1);
         dataTablesPage.firstName.sendKeys(string);
 
     }
-    @Given("user enters the last name {string}")
+    @When("user enters the last name {string}")
     public void user_enters_the_last_name(String string) {
         ReusableMethods.waitFor(1);
         dataTablesPage.lastName.sendKeys(string);
 
     }
-    @Given("user enters the position {string}")
+    @When("user enters the position {string}")
     public void user_enters_the_position(String string) {
         ReusableMethods.waitFor(1);
         dataTablesPage.position.sendKeys(string);
 
     }
-    @Given("user enters office {string}")
+    @When("user enters office {string}")
     public void user_enters_office(String string) {
         ReusableMethods.waitFor(1);
         dataTablesPage.office.sendKeys(string);
 
     }
-    @Given("user enters extension {string}")
+    @When("user enters extension {string}")
     public void user_enters_extension(String string) {
         ReusableMethods.waitFor(1);
         dataTablesPage.extension.sendKeys(string);
 
     }
-    @Given("user enters start date {string}")
+    @When("user enters start date {string}")
     public void user_enters_start_date(String string) {
         ReusableMethods.waitFor(1);
         dataTablesPage.startDate.sendKeys(string);
 
     }
-    @Given("user enters the salary {string}")
+    @When("user enters the salary {string}")
     public void user_enters_the_salary(String string) {
         ReusableMethods.waitFor(1);
         dataTablesPage.salary.sendKeys(string);
 
     }
-    @Given("click on create button")
+    @When("click on create button")
     public void click_on_create_button() {
         ReusableMethods.waitFor(1);
         dataTablesPage.createButton.click();
 
     }
-    @Given("search for the first name {string}")
+    @When("search for the first name {string}")
     public void search_for_the_first_name(String string) {
         ReusableMethods.waitFor(1);
         dataTablesPage.searchBox.sendKeys(string);

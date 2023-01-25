@@ -5,7 +5,7 @@ Feature: data_tables
 
     # Creating a reusable step that accept url and goes to that url
     Given user is on "https://editor.datatables.net/" page
-    And user clicks on the new button
+    When user clicks on the new button
     And user enters the first name "<firstname>"
     And user enters the last name "<lastname>"
     And user enters the position "<position>"
@@ -16,7 +16,7 @@ Feature: data_tables
     And click on create button
     And search for the first name "<firstname>"
     Then verify the name field contains the first name "<firstname>"
-    Then close the application
+    And close the application
 
     Examples: test_data
     | firstname | lastname | position  | office | extension | start_date | salary |
