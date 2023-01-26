@@ -1,8 +1,8 @@
 package stepdefinitions;
 
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pages.HomePage;
 import pages.LoginPage;
@@ -15,7 +15,7 @@ import java.util.Map;
 public class LoginStepDefinitions {
     LoginPage loginPage = new LoginPage();
     HomePage homePage = new HomePage();
-    @Given("user enters customer_email and customer_password")
+    @When("user enters customer_email and customer_password")
     public void user_enters_customer_email_and_customer_password(DataTable credentials) {
 
         // 1. Get data as list of String
