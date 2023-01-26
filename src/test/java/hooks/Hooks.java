@@ -31,13 +31,13 @@ public class Hooks {
     // @Before(value = "@smoke_tests")
     @Before("@smoke_tests")
     public void setUpSmokeScenarios(){
-        System.out.println("Run for only smoke test scenarios");
+        System.out.println("Run Before for only smoke test scenarios");
     }
 
     // This After hooks only runs for @smoke_tests tagged scenarios
     // @After(value = "@smoke_tests")
     @After("@smoke_tests")
     public void tearDownSmokeScenarios(){
-        System.out.println("Run for only smoke test scenarios");
+        System.out.println("Run After for only smoke test scenarios");
     }
 }
