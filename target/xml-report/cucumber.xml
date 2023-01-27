@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="43.077" tests="2" skipped="0" failures="1" errors="0">
-<testcase classname="data_tables" name="customer_login" time="25.554">
+<testsuite name="Cucumber" time="1.689" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="Medunna Room Creation" name="Create Room - Example #1.1" time="0.115">
+<failure/>
 <system-out><![CDATA[
-Given user is on "https://www.bluerentalcars.com/login" page................passed
-When user enters customer_email and customer_password.......................passed
-Then verify the application login is successful.............................passed
-And close the application...................................................passed
-]]></system-out>
-</testcase>
-<testcase classname="hooks_test" name="TC_01_test" time="15.89">
-<failure type="java.lang.AssertionError">
-<![CDATA[java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:87)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.junit.Assert.assertTrue(Assert.java:53)
-	at stepdefinitions.LoginStepDefinitions.verify_the_login_page_url_contains_login_keyword(LoginStepDefinitions.java:50)
-	at ✽.verify the login page url contains login keyword(file:///C:/Users/SAMSUNG/Desktop/my-cucumber-project/./src/test/resources/features/day26_failed_test_cases.feature:9)
-]]>
-</failure>
-<system-out><![CDATA[
-Given user is on "https://www.bluerentalcars.com/login" page................passed
-When user enters customer_email and customer_password.......................passed
-Then verify the login page url contains login keyword.......................failed
+Given user is on "https://medunna.com/" page................................passed
+When click on user icon.....................................................passed
+And click on Sign In option.................................................passed
+And enter "john_doe" in Username input......................................passed
+And enter "John.123" in Password input......................................passed
+And click on Remember Me checkbox...........................................passed
+And click on Sign In submit button..........................................passed
+And click on Items&Titles...................................................undefined
+And click on Room option....................................................skipped
+And click on Create a new room button.......................................skipped
+And enter "11111"...........................................................skipped
+And select Suite option from Room Type dropdown.............................skipped
+And click on Status checkbox................................................skipped
+And enter "123" in Price input..............................................skipped
+And enter "good"> in Description input......................................skipped
+And click on Save button....................................................skipped
+And click on Created Date...................................................skipped
+Then assert that room is created via "11111"................................skipped
+And close the application...................................................skipped
 ]]></system-out>
 </testcase>
 </testsuite>

@@ -13,11 +13,11 @@ import org.junit.runner.RunWith;
                 "json:target/json-reports/cucumber.json",
                 "junit:target/xml-report/cucumber.xml"
         },
-        monochrome=true,
+        monochrome=false,
         features = "./src/test/resources/features",
         glue = {"stepdefinitions", "hooks"},
-        dryRun = false,
-        tags = "@smoke_tests"
+        dryRun = true,
+        tags = "@MedunnaRoom"
 )
 public class Runner {
 }
