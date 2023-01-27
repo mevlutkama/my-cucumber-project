@@ -14,7 +14,7 @@ Feature: Medunna Room Creation
     And click on Items&Titles
     And click on Room option
     And click on Create a new room button
-    And enter "<room_number>"
+    And enter "<room_number>" room number input
     And select Suite option from Room Type dropdown
     And click on Status checkbox
     And enter "<price>" in Price input

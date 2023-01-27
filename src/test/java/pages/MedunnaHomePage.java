@@ -18,4 +18,10 @@ public class MedunnaHomePage {
     @FindBy(id = "login-item")
     public WebElement signInOption;
 
+    @FindBy(id = "entity-menu")
+    public WebElement itemsAndTitles;
+
+    @FindBy(linkText = "Room")
+    public WebElement roomOption;
+
 }
