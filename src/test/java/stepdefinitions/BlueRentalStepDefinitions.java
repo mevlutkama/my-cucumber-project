@@ -1,28 +1,39 @@
 package stepdefinitions;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import pages.BlueRentalHomePage;
+import pages.BlueRentalLoginPage;
+import utilities.ReusableMethods;
+
+import static org.junit.Assert.assertTrue;
 
 public class BlueRentalStepDefinitions {
 
+    BlueRentalHomePage blueRentalHomePage = new BlueRentalHomePage();
+    BlueRentalLoginPage blueRentalLoginPage = new BlueRentalLoginPage();
     @When("user navigates to the login page")
     public void user_navigates_to_the_login_page() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        blueRentalHomePage.loginButton.click();
     }
-    @When("enter {string}")
-    public void enter(String string) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+
+    @And("enter {string} for username")
+    public void enterForUsername(String username) {
+        blueRentalLoginPage.emailInput.sendKeys(username);
+    }
+
+    @And("enter {string} for password")
+    public void enterForPassword(String password) {
+        blueRentalLoginPage.passwordInput.sendKeys(password);
     }
     @When("click on login button")
     public void click_on_login_button() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        blueRentalLoginPage.loginSubmitButton.click();
     }
     @Then("verify the login is successful")
     public void verify_the_login_is_successful() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        assertTrue(blueRentalHomePage.userIdSection.isDisplayed());
+        ReusableMethods.waitFor(5);
     }
 }

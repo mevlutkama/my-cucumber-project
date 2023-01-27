@@ -4,10 +4,11 @@ Feature: blue_rental_manager_login
 
     Given user is on "https://www.bluerentalcars.com/" page
     When user navigates to the login page
-    And enter "<username>"
-    And enter "<password>"
+    And enter "<username>" for username
+    And enter "<password>" for password
     And click on login button
     Then verify the login is successful
+    Then close the application
 
     Examples: test_datas
     | username                        | password  |
