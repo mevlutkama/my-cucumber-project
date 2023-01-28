@@ -1,4 +1,4 @@
-@failed_tests, @smoke_tests
+@failed_tests
 Feature: hooks_test
 
   Scenario: TC_01_test

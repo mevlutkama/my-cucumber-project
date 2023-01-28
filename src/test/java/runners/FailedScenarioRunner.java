@@ -1,6 +1,5 @@
 package runners;
 
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -15,16 +14,15 @@ import org.junit.runner.RunWith;
                 "rerun:target/failedRerun.txt"
         },
         monochrome=false,
-        features = "./src/test/resources/features",
+        features = "@target/failedRerun.txt",
         glue = {"stepdefinitions", "hooks"},
-        dryRun = false,
-        tags = "@failed_tests"
+        dryRun = false
 )
-public class Runner {
+public class FailedScenarioRunner {
 }
 /*
- features = "./src/test/resources/features",//PATH OF FEATURES FOLDER
- glue = "stepdefinitions", //PATH OF STEP DEFINITIONS
- dryRun = false //IF dryRun = true. RUN DRY. JUST GIVE ME THE MISSING STEP DEFINITIONS. DON'T RUN THE TEST CASES.
- dryRun= false when we are doing test execution. dryRun=true when we are generation missing step definitions
+    This runner class is used to run only failedRun.txt file
+    That file only has failed scenarios if any scenario fails
+    That file will be empty if no scenario fails
+    We do not use tag or path of the features folder
  */
