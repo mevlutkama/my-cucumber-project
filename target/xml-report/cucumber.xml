@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="23.07" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="hooks_test" name="TC_01_test" time="22.502">
+<testsuite name="Cucumber" time="35.083" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="hooks_test" name="TC_01_test" time="32.63">
 <failure type="java.lang.AssertionError">
 <![CDATA[java.lang.AssertionError
 	at org.junit.Assert.fail(Assert.java:87)
 	at org.junit.Assert.assertTrue(Assert.java:42)
 	at org.junit.Assert.assertTrue(Assert.java:53)
 	at stepdefinitions.LoginStepDefinitions.verify_the_login_page_url_contains_login_keyword(LoginStepDefinitions.java:50)
-	at ✽.verify the login page url contains login keyword(file:///C:/Users/SAMSUNG/Desktop/my-cucumber-project/src/test/resources/features/day26_failed_test_cases.feature:9)
+	at ✽.verify the login page url contains login keyword(file:///C:/Users/SAMSUNG/Desktop/my-cucumber-project/./src/test/resources/features/day26_failed_test_cases.feature:9)
 ]]>
 </failure>
 <system-out><![CDATA[
