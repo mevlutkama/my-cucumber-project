@@ -17,6 +17,7 @@ stepdefinitions\MedunnaSignInStepDefinitions.class
 stepdefinitions\ExcelStepDefinitions.class
 pages\HomePage.class
 utilities\ReusableMethods$2.class
+runners\Runner.class
 runners\TestRunner.class
 utilities\Driver.class
 utilities\ExcelUtils.class
