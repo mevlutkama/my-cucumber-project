@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="27.902" tests="1" skipped="0" failures="0" errors="0">
-<testcase classname="grid_feature" name="TC02_running_tests_on_Firefox" time="26.343">
+<testsuite name="Cucumber" time="37.859" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="grid_feature" name="TC01_running_tests_on_Chrome" time="18.166">
+<system-out><![CDATA[
+Given user is on the application_url using chrome...........................passed
+Then verify the page title contains "Techpro Education".....................passed
+Then close application......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="grid_feature" name="TC02_running_tests_on_Firefox" time="17.951">
 <system-out><![CDATA[
 Given user is on the application_url using firefox..........................passed
 Then verify the page title contains "Techpro Education".....................passed

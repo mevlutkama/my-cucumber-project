@@ -1,0 +1,142 @@
+***SELENIUM GRID NOTES***
+Link: https://www.selenium.dev/documentation/grid/getting_started/
+
+Steps:
+1. Create a folder on desktop
+2. * Download Selenium Server: https://www.selenium.dev/downloads/
+   * Download Chrome Driver: https://chromedriver.chromium.org/downloads
+   * Download Firefox Driver: https://github.com/mozilla/geckodriver/releases/tag/v0.31.0
+   * Download Edge Driver: https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/
+
+Note: Make sure drivers are unzipped as application file and Selenium Server as jar file.
+
+-To Run Grid-
+3. Open terminal or CMD and change directory to SeleniumServer folder
+4. Run Standalone Server
+java -jar selenium-server-4.8.0.jar standalone
+http://192.168.1.3:4444
+
+5. Then you should see the message: Started Selenium Standalone 4.8.0:
+
+
+**So far we finished the set up and run selenium grid**
+**Now we will create our test case**
+
+6. We will design our test case in cucumber
+
+**Create a feature file: selenium_grid_test_case.feature
+@grid_feature
+Feature: grid_feature
+
+  @grid_chrome
+  Scenario: TC01_running_tests_on_Chrome
+    Given user is on the application_url using chrome
+    Then verify the page title contains "Techpro Education"
+    Then close application
+
+**Create Runner class for Selenium Grid**
+package runners;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+import org.junit.runner.RunWith;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+        plugin = {
+                "pretty",
+                "html:target/default-cucumber-reports.html",
+                "json:target/json-reports/cucumber.json",
+                "junit:target/xml-report/cucumber.xml",
+                "rerun:target/failedRerun.txt",
+
+        },
+        monochrome=false,
+        features = "./src/test/resources/features",
+        glue = {"stepdefinitions"},
+        dryRun = false,
+        tags = "@grid_feature"
+)
+public class GridRunner {
+}
+
+**Generate step definitions**
+package stepdefinitions;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.time.Duration;
+
+import static org.junit.Assert.assertTrue;
+
+public class GridStepDefinitions {
+
+    WebDriver driver;
+    @Given("user is on the application_url using chrome")
+    public void user_is_on_the_application_url_using_chrome() throws MalformedURLException {
+
+        // Running my test cases on a remote machine(Selenium Grid) using chrome
+                                                    // Selenium Grid Url
+        driver = new RemoteWebDriver(new URL("http://192.168.1.3:4444"), new ChromeOptions());
+
+        // Grid steps are done!!! Rest is same as regular selenium test cases
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.get("https://www.techproeducation.com");
+    }
+
+    @Then("verify the page title contains {string}")
+    public void verify_the_page_title_contains(String title) {
+        assertTrue(driver.getTitle().contains(title));;
+    }
+
+    @Then("close application")
+    public void close_application() {
+        driver.quit();
+    }
+
+    @Given("user is on the application_url using firefox")
+    public void userIsOnTheApplication_urlUsingFirefox() throws MalformedURLException {
+        // Running my test cases on a remote machine(Selenium Grid) using firefox
+                                                    // Selenium Grid Url
+        driver = new RemoteWebDriver(new URL("http://192.168.1.3:4444"), new FirefoxOptions());
+
+        // Grid steps are done!!! Rest is same as regular selenium test cases
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.get("https://www.techproeducation.com");
+    }
+}
+
+
+
+
+===============================================================
+
+1. What is Selenium Grid? When do you use it?
+**Selenium grid is used to run test cases
+    *for running on remote web driver
+    *for cross-browser testing(chrome, firefox, edge...)
+    *for parallel-testing
+    *for running different operating system such as IOS or windows
+
+2. How do you run test on Selenium Grid?
+    *we need selenium server, and drivers(chrome, firefox, edge...)
+    *they should be in the same folders
+    *use the CMD or terminal to run the server : java -jar selenium-server-4.8.0.jar standalone
+Note: with selenium 4, we can run in standalone or distributed node. we can also run using HUB and NODES
+
+3. What is HUB?
+   Hub is a virtual server. We can create only one hub.
+   java -jar selenium-server-4.8.0.jar standalone
+
+4. What is Node?
+   Node is a virtual machine. We can create multiple nodes using Hub
+   java -jar selenium-server-4.8.0.jar standalone

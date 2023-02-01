@@ -1,3 +1,4 @@
+@grid_feature
 Feature: grid_feature
 
   @grid_chrome

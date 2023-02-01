@@ -18,7 +18,7 @@ import org.junit.runner.RunWith;
         features = "./src/test/resources/features",
         glue = {"stepdefinitions"},
         dryRun = false,
-        tags = "@grid_firefox"
+        tags = "@grid_feature"
 )
 public class GridRunner {
 }
