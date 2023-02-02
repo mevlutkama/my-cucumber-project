@@ -13,10 +13,10 @@ import org.junit.runner.RunWith;
                 "junit:target/xml-report/cucumber.xml",
                 "rerun:target/failedRerun.txt",
         },
-        monochrome=true,
+        monochrome=false,
         features = "./src/test/resources/features/jdbc",
         glue = {"stepdefinitions"},
-        dryRun = true,
+        dryRun = false,
         tags = "@db_read"
 )
 public class DBRunners {

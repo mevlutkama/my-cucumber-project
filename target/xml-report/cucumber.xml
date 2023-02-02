@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="2.502" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="db_customer_testing" name="" time="0.066">
-<failure/>
+<testsuite name="Cucumber" time="45.315" tests="3" skipped="0" failures="0" errors="0">
+<testcase classname="db_customer_testing" name="TC01_read_customer_login_info" time="10.27">
 <system-out><![CDATA[
-Given user connects to the application database.............................undefined
-When user gets the column "*" from table "jhi_user".........................skipped
-Then user reads all column "login" data.....................................skipped
+Given user connects to the application database.............................passed
+When user gets the column "*" from table "jhi_user".........................passed
+Then user reads all column "login" data.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="db_customer_testing" name="TC02_read_customer_firstname_info" time="26.538">
+<system-out><![CDATA[
+Given user connects to the application database.............................passed
+When user gets the column "*" from table "jhi_user".........................passed
+Then user reads all column "first_name" data................................passed
+]]></system-out>
+</testcase>
+<testcase classname="db_customer_testing" name="TC03_read_customer_email_info" time="7.534">
+<system-out><![CDATA[
+Given user connects to the application database.............................passed
+When user gets the column "*" from table "tp_customer"......................passed
+Then user reads all column "email" data.....................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
