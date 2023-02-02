@@ -1,0 +1,44 @@
+JDBC NOTES:
+
+1. JDBC is an API to work with database
+   JDBC: Java Database Connectivity
+
+2. Add driver(dependency) for postgre sql
+
+ <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.5.2</version>
+        </dependency>
+
+3. Create feature file under jdbc folder: 'jdbc_read_data.feature'
+4. NOT MANDATORY: Create runner class for only database features
+
+package runners;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+import org.junit.runner.RunWith;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+        plugin = {
+                "pretty",
+                "html:target/default-cucumber-reports.html",
+                "json:target/json-reports/cucumber.json",
+                "junit:target/xml-report/cucumber.xml",
+                "rerun:target/failedRerun.txt",
+        },
+        monochrome=true,
+        features = "./src/test/resources/features/jdbc",
+        glue = {"stepdefinitions"},
+        dryRun = false,
+        tags = "@db_read"
+)
+public class DBRunners {
+}
+
+
+
+

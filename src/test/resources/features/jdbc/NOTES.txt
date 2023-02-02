@@ -1,0 +1,64 @@
+JDBC NOTES:
+
+1. JDBC is an API to work with database
+   JDBC: Java Database Connectivity
+
+2. Add driver(dependency) for postgre sql
+
+ <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.5.2</version>
+        </dependency>
+
+3. Create feature file under jdbc folder: 'jdbc_read_data.feature'
+4. NOT MANDATORY: Create runner class for only database features
+
+package runners;
+
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+import org.junit.runner.RunWith;
+
+@RunWith(Cucumber.class)
+@CucumberOptions(
+        plugin = {
+                "pretty",
+                "html:target/default-cucumber-reports.html",
+                "json:target/json-reports/cucumber.json",
+                "junit:target/xml-report/cucumber.xml",
+                "rerun:target/failedRerun.txt",
+        },
+        monochrome=true,
+        features = "./src/test/resources/features/jdbc",
+        glue = {"stepdefinitions"},
+        dryRun = false,
+        tags = "@db_read"
+)
+public class DBRunners {
+}
+
+5. Add Database Utilities Class in utilities package
+
+6. Generate the step definitions and type the code.
+
+package stepdefinitions;
+import io.cucumber.java.en.*;
+public class DatabaseStepDefinitions {
+
+    @Given("user connects to the application database")
+    public void user_connects_to_the_application_database() {
+
+    }
+    @When("user gets the column {string} from table {string}")
+    public void user_gets_the_column_from_table(String string, String string2) {
+
+    }
+    @Then("user reads all column {string} data")
+    public void user_reads_all_column_data(String string) {
+
+    }
+}
+
+
