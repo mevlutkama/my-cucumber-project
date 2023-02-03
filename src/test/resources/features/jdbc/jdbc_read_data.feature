@@ -19,7 +19,7 @@ Feature: db_customer_testing
 
   Scenario: TC03_read_customer_email_info
     Given user connects to the application database
-    #                   SELECT * FROM jhi_user
+    #                   SELECT * FROM tp_customer
     When user gets the column "*" from table "tp_customer"
-    # Read all of the first names of the customer
+    # Read all of the email of the customer
     Then user reads all column "email" data
