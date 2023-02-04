@@ -1,24 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="12.553" tests="3" skipped="0" failures="0" errors="0">
-<testcase classname="db_customer_testing" name="TC01_read_customer_login_info" time="5.084">
+<testsuite name="Cucumber" time="44.8" tests="14" skipped="0" failures="0" errors="0">
+<testcase classname="db_customer_testing" name="TC01_read_customer_login_info" time="4.974">
 <system-out><![CDATA[
 Given user connects to the application database.............................passed
 When user gets the column "*" from table "jhi_user".........................passed
 Then user reads all column "login" data.....................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="db_customer_testing" name="TC02_read_customer_firstname_info" time="3.446">
+<testcase classname="db_customer_testing" name="TC02_read_customer_firstname_info" time="3.407">
 <system-out><![CDATA[
 Given user connects to the application database.............................passed
 When user gets the column "*" from table "jhi_user".........................passed
 Then user reads all column "first_name" data................................passed
 ]]></system-out>
 </testcase>
-<testcase classname="db_customer_testing" name="TC03_read_customer_email_info" time="3.07">
+<testcase classname="db_customer_testing" name="TC03_read_customer_email_info" time="2.301">
 <system-out><![CDATA[
 Given user connects to the application database.............................passed
 When user gets the column "*" from table "tp_customer"......................passed
 Then user reads all column "email" data.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="db_customer_testing" name="TC04_read_customer_account_types" time="2.376">
+<system-out><![CDATA[
+Given user connects to the application database.............................passed
+And user gets the column "*" from table "tp_account"........................passed
+Then user reads all column "account_type" data..............................passed
+]]></system-out>
+</testcase>
+<testcase classname="db_customer_testing" name="TC05_verify_account_types - account_types - Example #1.1" time="2.426">
+<system-out><![CDATA[
+Given user connects to the application database.............................passed
+And user gets the column "*" from table "tp_account"........................passed
+Then verify table "tp_account" and column "account_type" contains data "CREDIT_CARD".passed
+]]></system-out>
+</testcase>
+<testcase classname="db_customer_testing" name="TC05_verify_account_types - account_types - Example #1.2" time="2.378">
+<system-out><![CDATA[
+Given user connects to the application database.............................passed
+And user gets the column "*" from table "tp_account"........................passed
+Then verify table "tp_account" and column "account_type" contains data "SAVING".passed
+]]></system-out>
+</testcase>
+<testcase classname="db_customer_testing" name="TC05_verify_account_types - account_types - Example #1.3" time="2.384">
+<system-out><![CDATA[
+Given user connects to the application database.............................passed
+And user gets the column "*" from table "tp_account"........................passed
+Then verify table "tp_account" and column "account_type" contains data "CHECKING".passed
+]]></system-out>
+</testcase>
+<testcase classname="db_customer_testing" name="TC05_verify_account_types - account_types - Example #1.4" time="2.339">
+<system-out><![CDATA[
+Given user connects to the application database.............................passed
+And user gets the column "*" from table "tp_account"........................passed
+Then verify table "tp_account" and column "account_type" contains data "INVESTING".passed
+]]></system-out>
+</testcase>
+<testcase classname="db_customer_testing" name="TC06_verify_user_login - account_types - Example #1.1" time="2.98">
+<system-out><![CDATA[
+Given user connects to the application database.............................passed
+And user gets the column "*" from table "jhi_user"..........................passed
+Then verify table "jhi_user" and column "login" contains data "anonymoususer".passed
+]]></system-out>
+</testcase>
+<testcase classname="db_customer_testing" name="TC06_verify_user_login - account_types - Example #1.2" time="3.086">
+<system-out><![CDATA[
+Given user connects to the application database.............................passed
+And user gets the column "*" from table "jhi_user"..........................passed
+Then verify table "jhi_user" and column "login" contains data "chantay.grant".passed
+]]></system-out>
+</testcase>
+<testcase classname="db_customer_testing" name="TC06_verify_user_login - account_types - Example #1.3" time="3.143">
+<system-out><![CDATA[
+Given user connects to the application database.............................passed
+And user gets the column "*" from table "jhi_user"..........................passed
+Then verify table "jhi_user" and column "login" contains data "tyron.towne".passed
+]]></system-out>
+</testcase>
+<testcase classname="db_customer_testing" name="TC07_verify_user_emails - account_types - Example #1.1" time="4.086">
+<system-out><![CDATA[
+Given user connects to the application database.............................passed
+And user gets the column "*" from table "jhi_user"..........................passed
+Then verify table "jhi_user" and column "email" contains data "breanna.ryan@yahoo.com".passed
+]]></system-out>
+</testcase>
+<testcase classname="db_customer_testing" name="TC07_verify_user_emails - account_types - Example #1.2" time="3.849">
+<system-out><![CDATA[
+Given user connects to the application database.............................passed
+And user gets the column "*" from table "jhi_user"..........................passed
+Then verify table "jhi_user" and column "email" contains data "cuppptan@gmail.com".passed
+]]></system-out>
+</testcase>
+<testcase classname="db_customer_testing" name="TC07_verify_user_emails - account_types - Example #1.3" time="3.866">
+<system-out><![CDATA[
+Given user connects to the application database.............................passed
+And user gets the column "*" from table "jhi_user"..........................passed
+Then verify table "jhi_user" and column "email" contains data "jordy.lynch@hotmail.com".passed
 ]]></system-out>
 </testcase>
 </testsuite>
