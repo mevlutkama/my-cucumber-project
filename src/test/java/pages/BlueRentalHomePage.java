@@ -12,11 +12,8 @@ public class BlueRentalHomePage {
 
         PageFactory.initElements(Driver.getDriver(),this);
     }
-
     @FindBy(xpath = "(//a[@role='button'])[1]")
     public WebElement loginButton;
-
     @FindBy(id = "dropdown-basic-button")
     public WebElement userIdSection;
-
 }
