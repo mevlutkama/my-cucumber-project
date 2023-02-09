@@ -8,6 +8,7 @@ import org.openqa.selenium.TakesScreenshot;
 import utilities.Driver;
 
 public class Hooks {
+
     /*
         Hooks is used to run before and after each scenario
      */
@@ -18,6 +19,7 @@ public class Hooks {
 
     @After
     public void tearDownScenario(Scenario scenario){
+
         // System.out.println("After Method");
         if (scenario.isFailed()){// capturing the screenshot when a scenario fails and attaching it to the report
             final byte[] failedScreenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
@@ -25,7 +27,6 @@ public class Hooks {
             Driver.closeDriver();
         }
     }
-
 
     // This Before hooks only runs for @smoke_tests tagged scenarios
     // @Before(value = "@smoke_tests")
