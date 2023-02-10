@@ -19,5 +19,6 @@ import org.junit.runner.RunWith;
         dryRun = false,
         tags = "@scenario_outline"
 )
+
 public class SmokeTestRunner {
 }
