@@ -13,7 +13,6 @@ public class BlueRentalStepDefinitions {
     public void user_navigates_to_the_login_page() {
         blueRentalHomePage.loginButton.click();
     }
-
     @And("enter {string} for username")
     public void enterForUsername(String username) {
         blueRentalLoginPage.emailInput.sendKeys(username);
