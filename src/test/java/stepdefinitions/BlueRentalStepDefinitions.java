@@ -8,7 +8,6 @@ import pages.BlueRentalLoginPage;
 import utilities.ReusableMethods;
 
 import static org.junit.Assert.assertTrue;
-
 public class BlueRentalStepDefinitions {
 
     BlueRentalHomePage blueRentalHomePage = new BlueRentalHomePage();
