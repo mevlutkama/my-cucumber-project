@@ -1,15 +1,12 @@
 package stepdefinitions;
-
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import pages.BlueRentalHomePage;
 import pages.BlueRentalLoginPage;
 import utilities.ReusableMethods;
-
 import static org.junit.Assert.assertTrue;
 public class BlueRentalStepDefinitions {
-
     BlueRentalHomePage blueRentalHomePage = new BlueRentalHomePage();
     BlueRentalLoginPage blueRentalLoginPage = new BlueRentalLoginPage();
     @When("user navigates to the login page")
