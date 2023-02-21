@@ -9,8 +9,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 public class DBUtils {
+
     //    connection : used to connect to DB
     private static Connection connection;
     //    statement : used to write queries
