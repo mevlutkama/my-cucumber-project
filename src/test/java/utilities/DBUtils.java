@@ -31,6 +31,7 @@ public class DBUtils {
             e.printStackTrace();
         }
     }
+
     /**
      * DBUtils.executeQuery(String query); -> Execute the query and store is the result set object
      * STATEMENT : is used to write query
@@ -50,6 +51,7 @@ public class DBUtils {
             e.printStackTrace();
         }
     }
+
     //    used to close the connectivity
     public static void closeConnection() {
         try {
@@ -66,7 +68,6 @@ public class DBUtils {
             e.printStackTrace();
         }
     }
-
 
     public static Connection getConnection() {
         String url = "jdbc:sqlserver://184.168.194.58:1433;databaseName=crystalkeyhotels2;user=Ahmet_User;password=Ahmet123!";
