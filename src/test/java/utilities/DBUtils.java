@@ -93,7 +93,6 @@ public class DBUtils {
         return statement;
     }
 
-
     //Use this to get the ResutSet object
     public static ResultSet getResultset() {
         try {
@@ -111,6 +110,7 @@ public class DBUtils {
         int rowCount = resultSet.getRow();
         return rowCount;
     }
+
     /**
      * @return returns a single cell value. If the results in multiple rows and/or
      *         columns of data, only first column of the first row will be returned.
@@ -119,11 +119,13 @@ public class DBUtils {
     public static Object getCellValue(String query) {
         return getQueryResultList(query).get(0).get(0);
     }
+
     /**
      * @return returns a list of Strings which represent a row of data. If the query
      *         results in multiple rows and/or columns of data, only first row will
      *         be returned. The rest of the data will be ignored
      */
+
     public static List<Object> getRowList(String query) {
         return getQueryResultList(query).get(0);
     }
