@@ -221,6 +221,7 @@ public class Driver {
             }
         }
     }
+
     /**
      * Clicks on an element using JavaScript
      *
