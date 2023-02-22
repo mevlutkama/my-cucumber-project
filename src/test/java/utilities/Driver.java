@@ -25,10 +25,13 @@ public class Driver {
     // We will create and initialize the driver when it is null
     // We can use Driver class with different browser(chrome,firefox,headless)
     private Driver() {
+
         //we don't want to create another abject. Singleton pattern
     }
+
     //to initialize the driver we create a static method
     public static WebDriver getDriver() {
+
         //create the driver if and only if it is null
         if (driver == null) {
             String browser = ConfigReader.getProperty("browser");
@@ -49,6 +52,7 @@ public class Driver {
                 driver = new ChromeDriver(new ChromeOptions().setHeadless(true));
             }
         }
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         return driver;
