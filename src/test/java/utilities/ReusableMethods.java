@@ -14,13 +14,14 @@ import java.util.List;
 import java.util.Random;
 import java.util.function.Function;
 public class ReusableMethods {
+
     /*HOW DO YOU GET SCREENSHOT?
      * I use getScreenShotAs method to take a screenshot in selenium in my framework
      * I actually store the screenshot with unique name in my framework*/
     public static String getScreenshot(String name) throws IOException {
-//        THIS METHOD TAKES SCREENSHOT AND STORE IN /test-output FOLDER
-//        NAME OF THE SCREEN IS BASED ON THE CURRENT TIME
-//        SO THAN WE CAN HAVE UNIQUE NAME
+        // THIS METHOD TAKES SCREENSHOT AND STORE IN /test-output FOLDER
+        // NAME OF THE SCREEN IS BASED ON THE CURRENT TIME
+        // SO THAN WE CAN HAVE UNIQUE NAME
         // naming the screenshot with the current date to avoid duplication
         String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
 //        public static final String path = date.toString();
