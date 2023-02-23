@@ -24,7 +24,7 @@ public class ReusableMethods {
         // SO THAN WE CAN HAVE UNIQUE NAME
         // naming the screenshot with the current date to avoid duplication
         String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
-//        public static final String path = date.toString();
+        // public static final String path = date.toString();
         // TakesScreenshot is an interface of selenium that takes the screenshot. SAME IS IN THE HOOKS
         TakesScreenshot ts = (TakesScreenshot) Driver.getDriver();
         File source = ts.getScreenshotAs(OutputType.FILE);
