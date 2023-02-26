@@ -1,7 +1,7 @@
 @blue_rental
 Feature: blue_rental_manager_login
-  Scenario Outline: US167854_manager_login_test
 
+  Scenario Outline: US167854_manager_login_test
     Given user is on "https://www.bluerentalcars.com/" page
     When user navigates to the login page
     And enter "<username>" for username

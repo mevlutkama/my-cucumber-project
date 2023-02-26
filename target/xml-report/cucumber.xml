@@ -1,19 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="27.748" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="hooks_test" name="TC_01_test" time="26.799">
-<failure type="java.lang.AssertionError">
-<![CDATA[java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:87)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.junit.Assert.assertTrue(Assert.java:53)
-	at stepdefinitions.LoginStepDefinitions.verify_the_login_page_url_contains_login_keyword(LoginStepDefinitions.java:50)
-	at ✽.verify the login page url contains login keyword(file:///C:/Users/SAMSUNG/Desktop/my-cucumber-project/./src/test/resources/features/day26_failed_test_cases.feature:9)
-]]>
-</failure>
+<testsuite name="Cucumber" time="1.344" tests="1" skipped="0" failures="1" errors="0">
+<testcase classname="Room Creation" name="TC03_Post_Request" time="0.367">
+<failure/>
 <system-out><![CDATA[
-Given user is on "https://www.bluerentalcars.com/login" page................passed
-When user enters customer_email and customer_password.......................passed
-Then verify the login page url contains login keyword.......................failed
+Given user sends post request for room data.................................undefined
+Then user gets room data and validates......................................skipped
 ]]></system-out>
 </testcase>
 </testsuite>

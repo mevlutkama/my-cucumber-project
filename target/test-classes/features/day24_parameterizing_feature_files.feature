@@ -1,5 +1,6 @@
 @parameterizing1
 Feature: Search_Feature
+
   Background: user_goes_to_google_page
     Given user is on the google home page
 
