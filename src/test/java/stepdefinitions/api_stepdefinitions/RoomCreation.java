@@ -9,8 +9,11 @@ import pojos.Room;
 
 import static base_urls.MedunnaBaseUrl.spec;
 import static io.restassured.RestAssured.given;
+import static org.junit.Assert.assertEquals;
+
 public class RoomCreation {
 
+    Response response;
     @Given("user sends post request for room data")
     public void user_sends_post_request_for_room_data() {
 
@@ -23,7 +26,7 @@ public class RoomCreation {
         room.setPrice(100);
         room.setDescription("This room is created by kama");
 
-        Response response = given().
+        response = given().
                 headers("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbnRlYW0wMiIsImF1dGgiOiJST0xFX0FETUlOIiwiZXhwIjoxNjc5OTA5NjM3fQ.B7R7ezvwhFV_5siDavUcft1plYmdAgUwhtl07LFRruTKPvNV0V_kwUjyN2xpnsZ5oUW5XjQsIOXDcwNyz8D3iQ",
                         "Content-Type", ContentType.JSON,
                         "Accept", ContentType.JSON).
@@ -37,5 +40,6 @@ public class RoomCreation {
     @Then("user gets room data and validates")
     public void user_gets_room_data_and_validates() {
 
+        assertEquals(201,response.getStatusCode());
     }
 }
