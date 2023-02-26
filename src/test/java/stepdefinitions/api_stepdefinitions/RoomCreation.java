@@ -1,6 +1,5 @@
 package stepdefinitions.api_stepdefinitions;
 
-
 import com.github.javafaker.Faker;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -10,8 +9,6 @@ import pojos.Room;
 
 import static base_urls.MedunnaBaseUrl.spec;
 import static io.restassured.RestAssured.given;
-
-
 public class RoomCreation {
 
     @Given("user sends post request for room data")
@@ -20,10 +17,11 @@ public class RoomCreation {
         spec.pathParams("first","api","second", "rooms");
 
         Room room = new Room();
-        room.setRoomNumber(Faker.instance().number().numberBetween(1000,100000));
+        room.setRoomNumber(Faker.instance().number().numberBetween(1000,1000000));
         room.setRoomType("TWIN");
         room.setStatus(true);
         room.setPrice(100);
+        room.setDescription("This room is created by kama");
 
         Response response = given().
                 headers("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbnRlYW0wMiIsImF1dGgiOiJST0xFX0FETUlOIiwiZXhwIjoxNjc5OTA5NjM3fQ.B7R7ezvwhFV_5siDavUcft1plYmdAgUwhtl07LFRruTKPvNV0V_kwUjyN2xpnsZ5oUW5XjQsIOXDcwNyz8D3iQ",

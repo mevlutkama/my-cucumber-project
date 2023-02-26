@@ -9,12 +9,14 @@ public class Room {
     private Integer roomNumber;
     private String roomType;
     private Boolean status;
+    private String description;
 
-    public Room(Integer price, Integer roomNumber, String roomType, Boolean status) {
+    public Room(Integer price, Integer roomNumber, String roomType, Boolean status, String description) {
         this.price = price;
         this.roomNumber = roomNumber;
         this.roomType = roomType;
         this.status = status;
+        this.description = description;
     }
 
     public Room() {
@@ -52,6 +54,13 @@ public class Room {
         this.status = status;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
     @Override
     public String toString() {
         return "Room{" +
@@ -59,6 +68,8 @@ public class Room {
                 ", roomNumber=" + roomNumber +
                 ", roomType='" + roomType + '\'' +
                 ", status=" + status +
+                ", description='" + description + '\'' +
                 '}';
     }
 }
+
