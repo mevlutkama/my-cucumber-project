@@ -6,10 +6,10 @@ import io.cucumber.java.en.Then;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import pojos.Room;
-
 import static base_urls.MedunnaBaseUrl.spec;
 import static io.restassured.RestAssured.given;
 import static org.junit.Assert.assertEquals;
+import static utilities.AuthenticationMedunna.generateToken;
 
 public class RoomCreation {
 
@@ -27,7 +27,7 @@ public class RoomCreation {
         room.setDescription("This room is created by kama");
 
         response = given().
-                headers("Authorization", "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbnRlYW0wMiIsImF1dGgiOiJST0xFX0FETUlOIiwiZXhwIjoxNjc5OTA5NjM3fQ.B7R7ezvwhFV_5siDavUcft1plYmdAgUwhtl07LFRruTKPvNV0V_kwUjyN2xpnsZ5oUW5XjQsIOXDcwNyz8D3iQ",
+                headers("Authorization", "Bearer "+ generateToken(),
                         "Content-Type", ContentType.JSON,
                         "Accept", ContentType.JSON).
                 spec(spec).
