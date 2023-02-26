@@ -6,6 +6,7 @@ import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import utilities.Driver;
+import static base_urls.MedunnaBaseUrl.medunnaSetUp;
 
 public class Hooks {
 
@@ -16,7 +17,6 @@ public class Hooks {
     public void setUpScenario(){
         // System.out.println("Before Method");
     }
-
     @After
     public void tearDownScenario(Scenario scenario){
 
@@ -40,5 +40,9 @@ public class Hooks {
     @After("@smoke_tests")
     public void tearDownSmokeScenarios(){
         System.out.println("Run After for only smoke test scenarios");
+    }
+    @Before("@TC03_Api")
+    public void beforeApi(){
+        medunnaSetUp();
     }
 }
