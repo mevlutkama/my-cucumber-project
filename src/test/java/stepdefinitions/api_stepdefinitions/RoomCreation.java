@@ -61,7 +61,6 @@ public class RoomCreation {
 
         // 2.Validation
         JsonPath jsonPath = response.jsonPath();
-
         assertEquals(roomNumber, jsonPath.getInt("roomNumber"));
         assertEquals(room.getRoomType(), jsonPath.getString("roomType"));
         assertEquals(room.getStatus(), jsonPath.getBoolean("status"));
