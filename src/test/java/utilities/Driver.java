@@ -252,9 +252,10 @@ public class Driver {
     public static void doubleClick(WebElement element) {
         new Actions(Driver.getDriver()).doubleClick(element).build().perform();
     }
+
     //    Parameter1 : WebElement
-//    Parameter2:  String
-//    Driver.selectByVisibleText(dropdown element, "CHECKING-91303-116.98$")
+    //    Parameter2:  String
+    //    Driver.selectByVisibleText(dropdown element, "CHECKING-91303-116.98$")
     public static void selectByVisibleText(WebElement element, String text) {
         Select objSelect = new Select(element);
         objSelect.selectByVisibleText(text);
