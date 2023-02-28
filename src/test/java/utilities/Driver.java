@@ -243,6 +243,7 @@ public class Driver {
             ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].click();", each);
         }
     }
+
     /**
      * Performs double click action on an element
      *
