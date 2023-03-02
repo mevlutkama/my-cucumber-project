@@ -161,6 +161,7 @@ public class DBUtils {
         }
         return rowList;
     }
+
     /**
      * @return list of values of a single column from the result set
      */
