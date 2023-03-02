@@ -141,6 +141,7 @@ public class DBUtils {
      * @return returns query result in a list of lists where outer list represents
      *         collection of rows and inner lists represent a single row
      */
+
     public static List<List<Object>> getQueryResultList(String query) {
         executeQuery(query);
         List<List<Object>> rowList = new ArrayList<>();
