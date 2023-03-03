@@ -82,6 +82,7 @@ public class ReusableMethods {
             e.printStackTrace();
         }
     }
+
     //===============Explicit Wait==============//
     public static WebElement waitForVisibility(WebElement element, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeout));
