@@ -125,6 +125,7 @@ public class ReusableMethods {
                     "Timeout waiting for Page Load Request to complete after " + timeout + " seconds");
         }
     }
+
     //======Fluent Wait====//
     public static WebElement fluentWait(final WebElement webElement, int timeout) {
         //FluentWait<WebDriver> wait = new FluentWait<WebDriver>(Driver.getDriver()).withTimeout(timeinsec, TimeUnit.SECONDS).pollingEvery(timeinsec, TimeUnit.SECONDS);
