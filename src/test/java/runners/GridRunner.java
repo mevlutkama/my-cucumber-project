@@ -22,7 +22,6 @@ import org.junit.runner.RunWith;
 )
 public class GridRunner {
 }
-
 /*
  features = "./src/test/resources/features",//PATH OF FEATURES FOLDER
  glue = "stepdefinitions", //PATH OF STEP DEFINITIONS
