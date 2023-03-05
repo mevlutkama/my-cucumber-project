@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Cucumber" time="2.249" tests="1" skipped="0" failures="1" errors="0">
-<testcase classname="User Validation" name="Validate user by login/username" time="0.332">
-<failure/>
+<testsuite name="Cucumber" time="6.499" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Room Validation" name="Validate Room By Room Number" time="5.291">
 <system-out><![CDATA[
-Given user connects to database.............................................undefined
-When get all "usernames" as a list..........................................skipped
-Then verify username list contains "login"..................................skipped
+Given user connects to database.............................................passed
+When get all "room_number" as a list from "room"............................passed
+Then verify list contains "75634221"........................................passed
+And close the connection....................................................passed
 ]]></system-out>
 </testcase>
 </testsuite>
