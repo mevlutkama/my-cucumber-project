@@ -21,13 +21,13 @@ public class DBUtils {
      * DBUtils.createConnection(); -> to connect to teh database
      */
     public static void createConnection() {
-        String url = "jdbc:postgresql://157.230.48.97:5432/gmibank_db";
-        String username="techprodb_user";
-        String password="Techpro_@126";
+        String url = "jdbc:postgresql://MEDUNNA.COM:5432/medunna_db_v2";
+        String username="select_user";
+        String password="Medunna_pass_@6";
         try {
             connection = DriverManager.getConnection(url, username, password);
         } catch (SQLException e) {
-            // TODO Auto-generated catch block
+
             e.printStackTrace();
         }
     }
