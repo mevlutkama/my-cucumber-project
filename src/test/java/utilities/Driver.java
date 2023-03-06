@@ -261,8 +261,8 @@ public class Driver {
         objSelect.selectByVisibleText(text);
     }
     //    Parameter1 : WebElement
-//    Parameter2:  int
-//    Driver.selectByIndex(dropdown element, 1)
+    //    Parameter2:  int
+    //    Driver.selectByIndex(dropdown element, 1)
     public static void selectByIndex(WebElement element, int index) {
         Select objSelect = new Select(element);
         objSelect.selectByIndex(index);
