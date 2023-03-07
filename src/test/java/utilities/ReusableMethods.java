@@ -139,6 +139,7 @@ public class ReusableMethods {
         });
         return element;
     }
+
     /**
      * Performs double click action on an element
      * @param element
