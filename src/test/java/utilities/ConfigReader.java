@@ -7,7 +7,6 @@ public class ConfigReader {
     // configuration.properties file
     private static Properties properties;
     static {
-
         // path of the config file
         String path = "configuration.properties";
         try {
