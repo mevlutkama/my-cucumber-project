@@ -37,6 +37,7 @@ public class DBUtils {
      * STATEMENT : is used to write query
      */
     public static void executeQuery(String query) {
+
         try {
             statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
         } catch (SQLException e) {
