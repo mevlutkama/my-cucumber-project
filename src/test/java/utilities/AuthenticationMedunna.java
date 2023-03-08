@@ -11,6 +11,7 @@ public class AuthenticationMedunna {
         hashMap.put("password", "Team02+");
         hashMap.put("rememberMe", true);
         hashMap.put("username", "AdminTeam02");
+
         Response response = given().contentType(ContentType.JSON).body(hashMap).when().post("https://medunna.com/api/authenticate");
         String token = response.jsonPath().getString("id_token");
         return token;
