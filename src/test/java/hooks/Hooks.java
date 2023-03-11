@@ -7,7 +7,6 @@ import org.openqa.selenium.TakesScreenshot;
 import utilities.Driver;
 import static base_urls.MedunnaBaseUrl.medunnaSetUp;
 public class Hooks {
-
     /*
         Hooks is used to run before and after each scenario
      */
