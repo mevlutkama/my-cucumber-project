@@ -79,6 +79,7 @@ public class RoomCreation {
 
         // 4.Validation
         Room actualDataPojo = response.as(Room.class);
+
         assertEquals(room.getRoomNumber(),actualDataPojo.getRoomNumber());
         assertEquals(room.getRoomType(),actualDataPojo.getRoomType());
         assertEquals(room.getStatus(),actualDataPojo.getStatus());
