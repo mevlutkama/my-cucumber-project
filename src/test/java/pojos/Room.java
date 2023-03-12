@@ -9,7 +9,6 @@ public class Room {
     private String roomType;
     private Boolean status;
     private String description;
-
     public Room(Integer price, Integer roomNumber, String roomType, Boolean status, String description) {
         this.price = price;
         this.roomNumber = roomNumber;
