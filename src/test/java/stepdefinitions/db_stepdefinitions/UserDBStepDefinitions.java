@@ -28,7 +28,6 @@ public class UserDBStepDefinitions {
     public void verify_username_list_contains(String username) {
         assertTrue(columnList.contains(username));
     }
-
     @And("close the connection")
     public void closeTheConnection() {
         DBUtils.closeConnection();
