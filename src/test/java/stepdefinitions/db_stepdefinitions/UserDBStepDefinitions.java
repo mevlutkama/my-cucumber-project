@@ -24,7 +24,6 @@ public class UserDBStepDefinitions {
         columnList = DBUtils.getColumnData(query, columnName);
         System.out.println("columnList = " + columnList);
     }
-
     @Then("verify username list contains {string}")
     public void verify_username_list_contains(String username) {
         assertTrue(columnList.contains(username));
