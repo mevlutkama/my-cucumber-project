@@ -31,6 +31,7 @@ public class Driver {
     public static WebDriver getDriver() {
 
         //create the driver if and only if it is null
+
         if (driver == null) {
             String browser = ConfigReader.getProperty("browser");
             if ("chrome".equals(browser)) {
