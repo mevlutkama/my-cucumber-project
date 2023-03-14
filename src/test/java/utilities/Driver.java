@@ -27,7 +27,6 @@ public class Driver {
     private Driver() {
         //we don't want to create another abject. Singleton pattern
     }
-
     //to initialize the driver we create a static method
     public static WebDriver getDriver() {
 
